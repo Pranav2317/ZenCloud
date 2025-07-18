@@ -1,0 +1,52 @@
+Step-by-Step Guide to Connect Your Website to Supabase
+
+1. Create a Supabase Account:
+   - Go to https://supabase.com/ and click "Start your project"
+   - Sign up with your GitHub, GitLab, or email account
+
+2. Create a New Project:
+   - Click "New Project"
+   - Enter a name for your project
+   - Choose a region close to your users
+   - Set a secure database password
+   - Click "Create new project"
+
+3. Get Your Project Credentials:
+   - After project creation, go to Project Settings
+   - Navigate to the "API" section
+   - Copy your:
+     * Project URL (this is your supabaseUrl)
+     * Public/anonymous key (this is your supabaseKey)
+
+4. Update auth.js:
+   - Open Website/auth.js
+   - Replace 'YOUR_SUPABASE_URL' with your Project URL
+   - Replace 'YOUR_SUPABASE_ANON_KEY' with your Public/anonymous key
+
+5. Enable Email Authentication:
+   - Go to Authentication -> Providers
+   - Enable "Email" provider
+   - Configure email templates if needed
+   - Save settings
+
+6. Set Up Database Tables (Optional):
+   - If you need to store additional user data:
+   - Go to Table Editor
+   - Create a new table (e.g., 'profiles')
+   - Add columns as needed
+
+7. Test Your Implementation:
+   - Open index.html in a browser
+   - Try registering a new account
+   - Check your email for verification
+   - Test login functionality
+
+8. Deployment Considerations:
+   - For production, enable Row Level Security (RLS)
+   - Consider using environment variables for API keys
+   - Set up proper CORS rules in Supabase settings
+
+Troubleshooting:
+- Ensure your Supabase project is set up correctly.
+- Check console logs for any errors during authentication.
+- Verify that the email provider is enabled in Supabase settings.
